@@ -5,21 +5,17 @@ const Register: React.FC = () => {
   return (
     <div>
       <form id="registerForm" name="registerForm" onSubmit={handleFormData()}>
-        <label htmlFor="firstName">first name</label>
-        <input type="text" id="firstName" name="firstName" required />
+        <input type="text" id="firstName" name="firstName" placeholder="firstName" required />
 
-        <label htmlFor="lastName">last name</label>
-        <input type="text" id="lastName" name="lastName" required />
+        <input type="text" id="lastName" name="lastName" placeholder="last name" required />
 
-        <label htmlFor="userName">user name</label>
-        <input type="text" id="userName" name="userName" required />
+        <input type="text" id="userName" name="userName" placeholder="userName" required />
 
-        <label htmlFor="email">email</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="email" required />
 
-        <label htmlFor="password">password</label>
-        <input type="password" id="password" name="password" required />
-        <button type="submit">aaa</button>
+        <input type="password" id="password" name="password" placeholder="password" required />
+
+        <button type="submit">register</button>
       </form>
     </div>
   );
