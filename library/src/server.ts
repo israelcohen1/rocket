@@ -17,6 +17,7 @@ mongoose.connect(dbLink).then(()=>{
   console.log(err)
 });
 
+//cors setup
 const allowedOrigin = 'https://localhost:5173';
 // Configure CORS middleware
 const corsOptions: cors.CorsOptions = {
@@ -36,10 +37,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
 app.use(cors(corsOptions));
-// app.use('/route',route);
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-  });
+
+//routes
+import userRouter from './routes/public/userRouter';
+app.use('/user',userRouter);
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
